@@ -5,7 +5,7 @@ export const GoToHome = () => {
     const navigate=useNavigate();
   return (
     <div>
-      <button onClick={()=>navigate('/')} className='btn btn-danger'>Go To Home</button>
+      <button onClick={()=>navigate('/')} className='btn btn-success w-50 my-4 fw-bold'>Go To Home</button>
     </div>
   )
 }

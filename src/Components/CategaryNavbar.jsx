@@ -11,32 +11,33 @@ export const CategaryNavbar = () => {
     const nevigate=useNavigate();
   return (
     <div>
-      <row className='d-flex justify-content-between fw-semibold py-3' style={{display:'flex',flexWrap:'wrap'}} >
-            <div  onClick={()=>nevigate('/veg')} style={{textDecoration:"none",color:'grey'}}> Vegetables & Fruits</div>
-            <div  onClick={()=>nevigate('/veg')} style={{textDecoration:"none",color:'grey'}}> Dairy & Breakfast</div>
-            <div  onClick={()=>nevigate('/veg')} style={{textDecoration:"none",color:'grey'}}> Munchies</div>
-            <div  onClick={()=>nevigate('/veg')} style={{textDecoration:"none",color:'grey'}}> Cold Drinks & Juices</div>
-            <div  onClick={()=>nevigate('/veg')} style={{textDecoration:"none",color:'grey'}}> Instant & Frozen Food</div>
-            <div  onClick={()=>nevigate('/veg')} style={{textDecoration:"none",color:'grey'}}> Tea, Coffee & Health Drinks</div>
-            <div  onClick={()=>nevigate('/veg')} style={{textDecoration:"none",color:'grey'}}> Bakery & Biscuits</div>
-            <div>
-                <select className='selectpicker w-50 border-0'>
-                    <option className='text-secondary fw-semibold'>More</option>
-                    <option className='text-secondary fw-semibold'>Daily Uses Products</option>
-                    <option className='text-secondary fw-semibold'>Softdrink and Alcohol</option>
-                    <option className='text-secondary fw-semibold'>Vegitables and Fresh Fruits</option>
-                    <option className='text-secondary fw-semibold'>Breakfast,Launch and Dinner</option>
-                    <option className='text-secondary fw-semibold'>Daily Uses Products</option>
-                    <option className='text-secondary fw-semibold'>Softdrink and Alcohol</option>
-                    <option className='text-secondary fw-semibold'>Vegitables and Fresh Fruits</option>
-                    <option className='text-secondary fw-semibold'>Breakfast,Launch and Dinner</option>
-                    <option className='text-secondary fw-semibold'>Daily Uses Products</option>
-                    <option className='text-secondary fw-semibold'>Softdrink and Alcohol</option>
-                    <option className='text-secondary fw-semibold'>Vegitables and Fresh Fruits</option>
-                    <option className='text-secondary fw-semibold'>Breakfast,Launch and Dinner</option>
-                    <option className='text-secondary fw-semibold'>Other</option>
-                </select>
-            </div>
+      <row className='d-flex justify-content-between fw-semibold py-3 ' style={{display:'flex',flexWrap:'wrap'}} >
+            <div  onClick={()=>nevigate('/veg')} style={{color:'grey'}}> Vegetables & Fruits</div>
+            <div  onClick={()=>nevigate('/veg')} style={{color:'grey'}}> Dairy & Breakfast</div>
+            <div  onClick={()=>nevigate('/veg')} style={{color:'grey'}}> Munchies</div>
+            <div  onClick={()=>nevigate('/veg')} style={{color:'grey'}}> Cold Drinks & Juices</div>
+            <div  onClick={()=>nevigate('/veg')} style={{color:'grey'}}> Instant & Frozen Food</div>
+            <div  onClick={()=>nevigate('/veg')} style={{color:'grey'}}> Tea, Coffee & Health Drinks</div>
+            <div  onClick={()=>nevigate('/veg')} style={{color:'grey'}}> Bakery & Biscuits</div>
+            
+            <button class=" dropdown-toggle border-0 bg-light fw-semibold text-secondary " type="button" data-bs-toggle="dropdown" aria-expanded="false" style={{fontSize:'16px'}}>
+            More
+  </button>
+  <ul class="dropdown-menu">
+    <li><a onClick={()=>nevigate('/veg')}  class="dropdown-item" href="#">Daily Uses Products</a></li>
+    <li><a onClick={()=>nevigate('/veg')} class="dropdown-item" href="#">Softdrink and Alcohol</a></li>
+    <li><a onClick={()=>nevigate('/veg')} class="dropdown-item" href="#">Vegitables and Fresh Fruits</a></li>
+    <li><a onClick={()=>nevigate('/veg')} class="dropdown-item" href="#">Breakfast,Launch and Dinner</a></li>
+    <li><a onClick={()=>nevigate('/veg')} class="dropdown-item" href="#">Daily Uses Products</a></li>
+    <li><a onClick={()=>nevigate('/veg')} class="dropdown-item" href="#">Softdrink and Alcohol</a></li>
+    <li><a onClick={()=>nevigate('/veg')} class="dropdown-item" href="#">Vegitables and Fresh Fruits</a></li>
+    <li><a onClick={()=>nevigate('/veg')} class="dropdown-item" href="#">Breakfast,Launch and Dinner</a></li>
+    <li><a onClick={()=>nevigate('/veg')} class="dropdown-item" href="#">Daily Uses Products</a></li>
+    <li><a onClick={()=>nevigate('/veg')} class="dropdown-item" href="#">Softdrink and Alcohol</a></li>
+    <li><a onClick={()=>nevigate('/veg')} class="dropdown-item" href="#">Vegitables and Fresh Fruits</a></li>
+    <li><a onClick={()=>nevigate('/veg')} class="dropdown-item" href="#">Breakfast,Launch and Dinner</a></li>
+
+  </ul>
         </row>
         <Outlet/>
     </div>

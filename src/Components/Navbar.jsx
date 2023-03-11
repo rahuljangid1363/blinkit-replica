@@ -4,7 +4,7 @@ import {NavLink,  useNavigate } from "react-router-dom";
 import Modal from 'react-bootstrap/Modal';
 import { useState } from "react";
 import DeliveryLocation from "./DeliveryLocation";
-
+import { AiFillAudio ,AiOutlineSearch,AiOutlineShoppingCart,AiOutlineUnorderedList} from "react-icons/ai";
 
 const Navbar = () => {
   const nevigate=useNavigate()
@@ -15,36 +15,37 @@ const Navbar = () => {
   return (
     <div>
      
-      <div className="container-fluid py-3 shadow">
-        <div className="row d-flex">
-       <div className="col-md-4 mb-3">
+      <div className="container-fluid pt-3">
+        <div className="row d-flex ">
+       <div className="col-lg-4  ">
         <div className="row">
-          <div className="col-6">
-          <img onClick={()=>nevigate("/")} src="https://d35fo82fjcw0y8.cloudfront.net/2022/01/25060423/Blinkit_Logo%402x.png"
-              height={55}
-              alt="Blinket"
-            />
+          <div className="col-lg-6 d-flex  justify-content-between">
+            <img onClick={()=>nevigate("/")} src="https://d35fo82fjcw0y8.cloudfront.net/2022/01/25060423/Blinkit_Logo%402x.png"  height={55}  alt="Blinket"/>
+            <h1 onClick={()=>nevigate('/cart')} className="d-flex d-lg-none bg-dark text-light p-2 rounded align-self-center"><AiOutlineUnorderedList/></h1>
           </div>
-          <div className="col-6">
+          <div className="col-lg-6">
           <DeliveryLocation/>
+          
           </div>
         </div>
        </div>
- 
-          <div className="col-md-8 d-flex justify-content-around ">
-            <input onClick={()=>nevigate('/trending')} style={{height:'38px'}} className="w-75 rounded border-0 shadow align-self-center form-control" type="text" placeholder="Search Anything"/>
+          <div className="col-md-8 d-lg-flex d-none justify-content-around  align-self-center ">
+           <div className="shadow w-75 d-flex rounded p-0 align-self-center">
+            <AiOutlineSearch className="align-self-center fs-3"/>
+            <input onClick={()=>nevigate('/trending')} style={{height:'45px'}} className=" border-0 align-self-center w-100" type="text"  placeholder="Search Anything"/>
+            <AiFillAudio onClick={()=>nevigate('assistant')} className="align-self-center fs-3"/></div>
             <NavLink style={{ textDecoration: "none", color: "black" }} className="align-self-center fs-5 fw-semibold" onClick={handleShow}>
               <span>Login</span>
             </NavLink>
-            <button onClick={()=>nevigate('/cart')} className="btn btn-success fw-semibold d-flex px-3 pb-0">
-              {users.length}
-             <img  className="align-self-center"
-                src="https://icon-library.com/images/cart-icon-png-white/cart-icon-png-white-24.jpg" alt="cart" height={30} />
-              CART
+            <button onClick={()=>nevigate('/cart')} className="btn btn-success fw-semibold">
+              <AiOutlineShoppingCart className="fs-1"/>
+              <span className="px-1"> {users.length} </span>
+             <span>items</span>
+           
             </button>
            
           </div>
-        </div><hr className="mb-0" />
+        </div><hr className="mb-0" id="hr" />
       </div>
 
 
@@ -63,7 +64,6 @@ const Navbar = () => {
     </div>
         </Modal.Body>
       </Modal>
-       
     </div>
   );
 };

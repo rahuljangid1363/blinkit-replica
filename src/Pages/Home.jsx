@@ -15,7 +15,7 @@ const Home = () => {
            {
             OfferCardApi.map((item)=>(
               <div className="col-md-3">
-              <OfferCard product={item} />
+              <OfferCard product={item} key={item.id}/>
             </div>
             ))
            }
@@ -27,7 +27,7 @@ const Home = () => {
         <div className="row">
           {Catagary.map((item) => (
             <>
-              <CategoryCard product={item} />
+              <CategoryCard product={item} key={item.id}/>
             </>
           ))}
         </div>
@@ -39,7 +39,7 @@ const Home = () => {
           ApiOfProducts.map((item)=>(
             <>
             <div id="hovers" className="col-lg-2 col-md-3 col-sm-4 m-1 my-4">
-                <Card product={item}/>
+                <Card product={item} key={item.id} />
             </div>
             </>
           ))
@@ -47,6 +47,7 @@ const Home = () => {
         </div>
 {/* ----->>>>>>>>>>>>>>> Cart_Componet_----->>>>>>> */}
       </div>
+   
     </>
   );
 };

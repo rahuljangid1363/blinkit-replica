@@ -6,10 +6,19 @@
   border: 1px solid rgb(188, 188, 188);
  
 }
-#OfferCard{
-  /* background-image: url("https://live.staticflickr.com/4125/5063188246_4ccaca3918_b.jpg"); */
+/* #OfferCard{
+  background-image: url("https://live.staticflickr.com/4125/5063188246_4ccaca3918_b.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 25px;
+} */
+input:focus{
+  outline: none;
+}
+#bttn{
+  border: 1px solid rgb(191, 191, 191);
+}
+#hr{
+  border:1px solid rgba(0, 0, 0, 0.2);
 }

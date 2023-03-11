@@ -17,9 +17,9 @@ export const Card=({product})=>{
            
                 <div className="col-12 d-flex justify-content-around"> 
                 <p className="fw-bold fs-5 ">₹{product.price}</p>
-                    <button className="btn btn-outline-success px-4 py-0" onClick={() => dispatch(add(product))}> ADD </button>
+                    <button className="btn btn-outline-success px-4 py-0 fw-semibold" onClick={() => dispatch(add(product))}> ADD </button>
                 </div>
-                <p className="text-center d-flex ">Items  : <h5>{users.length}</h5></p>
+                <p className="text-center d-flex ">Items  : <span className="fs-5">{users.length}</span></p>
     </div>
     </>)
 }
