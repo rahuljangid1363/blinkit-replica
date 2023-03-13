@@ -4,11 +4,14 @@ import { CategoryCard } from "../Components/CategoryCard";
 import { Banner } from "../Components/Banner";
 import { OfferCard } from "../Components/OfferCard";
 import { Card } from "../Components/Card";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate=useNavigate()
   return (
     <>
       <div className="container-fluid mt-2 w-100">
+      
         <Banner />
 {/* ----->>>>>>>>>>>>>>> OfferCard_Componet_----->>>>>>> */}
          <div className="row">
@@ -32,6 +35,7 @@ const Home = () => {
           ))}
         </div>
 {/* ----->>>>>>>>>>>>>>> Category_Componet_----->>>>>>> */}
+<h4 onClick={()=>navigate('/category-wise-product')} className="text-success text-end">see all</h4>
         <h3 className="mt-2">Book your order</h3>
 {/* ----->>>>>>>>>>>>>>> Cart_Componet_----->>>>>>> */}
         <div className="row justify-content-around">
@@ -53,3 +57,4 @@ const Home = () => {
 };
 
 export default Home;
+

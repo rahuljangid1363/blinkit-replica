@@ -4,7 +4,8 @@ import {NavLink,  useNavigate } from "react-router-dom";
 import Modal from 'react-bootstrap/Modal';
 import { useState } from "react";
 import DeliveryLocation from "./DeliveryLocation";
-import { AiFillAudio ,AiOutlineSearch,AiOutlineShoppingCart,AiOutlineUnorderedList} from "react-icons/ai";
+import { AiFillAudio ,AiOutlineSearch,AiOutlineUnorderedList} from "react-icons/ai";
+import { CartButton } from "../Pages/CartButton";
 
 const Navbar = () => {
   const nevigate=useNavigate()
@@ -25,7 +26,6 @@ const Navbar = () => {
           </div>
           <div className="col-lg-6">
           <DeliveryLocation/>
-          
           </div>
         </div>
        </div>
@@ -37,13 +37,7 @@ const Navbar = () => {
             <NavLink style={{ textDecoration: "none", color: "black" }} className="align-self-center fs-5 fw-semibold" onClick={handleShow}>
               <span>Login</span>
             </NavLink>
-            <button onClick={()=>nevigate('/cart')} className="btn btn-success fw-semibold">
-              <AiOutlineShoppingCart className="fs-1"/>
-              <span className="px-1"> {users.length} </span>
-             <span>items</span>
-           
-            </button>
-           
+            <CartButton/>
           </div>
         </div><hr className="mb-0" id="hr" />
       </div>

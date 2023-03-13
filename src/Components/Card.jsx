@@ -7,6 +7,7 @@ export const Card=({product})=>{
     const users = useSelector((state) => state.users);
     const dispatch = useDispatch();
     return(<>
+    <div className="bg-primary text-light w-50 my-2 rounded-pill text-center">{product.discount}</div>
     <div>
     <div className=" text-center">
     <img onClick={() => nevigate("/details-of-item")} src={product.image} alt="ra" width={100} />

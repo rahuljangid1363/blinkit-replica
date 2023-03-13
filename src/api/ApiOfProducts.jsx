@@ -11,6 +11,7 @@
     about: "Nested Milkmaid",
     quantity: "300gm",
     price: "207",
+    discount:'15% OFF'
   },
    {
     id: 2,
@@ -32,6 +33,7 @@
     about: "Table White Eggs",
     quantity: "500gm",
     price: "120",
+    discount:'8% OFF'
   },
   {
     id: 5,
@@ -201,21 +203,25 @@ export const Catagary=[
 
 
 export const  OfferCardApi=[
-  {name:'rahul jangid',
+  {
   id:1,
-    image:'https://live.staticflickr.com/4125/5063188246_4ccaca3918_b.jpg'
+  discount:'5%',
+    image:'https://images.unsplash.com/photo-1579314750475-8f588b361aa3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80'
   },
-  {name:'vimal jangid',
+  {
   id:2,
-    image:'https://www.wallpaperup.com/uploads/wallpapers/2014/02/19/260287/1014224c78cb10f0691bc312bf74da7a-700.jpg'
+  discount:'10%',
+    image:'https://4kwallpapers.com/images/wallpapers/vivo-stock-flower-black-background-dark-android-10-4680x2160-490.jpg'
   },
-  {name:'dinesh jangid',
+  {
   id:3,
-    image:'https://wallpaperaccess.com/full/813570.jpg'
+  discount:'15%',
+    image:'https://rare-gallery.com/uploads/posts/386507-4k-wallpaper.jpg'
   },
-  {name:'maehsh jangid',
+  {
   id:4,
-    image:'https://live.staticflickr.com/4125/5063188246_4ccaca3918_b.jpg'
+  discount:'20%',
+    image:'https://c4.wallpaperflare.com/wallpaper/913/624/919/purple-flower-petals-macro-photography-black-background-wallpaper-thumb.jpg'
   },
   
 ]

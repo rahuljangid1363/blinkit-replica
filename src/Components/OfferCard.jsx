@@ -8,15 +8,20 @@ const design={
   borderRadius: '25px'
 }
 export const OfferCard = ({product}) => {
-  console.log("------->>>>>>>>>>",product.image);
   const navigate=useNavigate()
   return (
-    <div className='p-3 border text-primary' style={design}>
-     <div onClick={()=>navigate('/offer-page')}>
-      <h2 className='fw-bold  '>Get up to 15% OFF!</h2>
+    <div className='p-3 border text-light' style={{
+       backgroundImage: `url(${product.image})`,
+  backgroundPosition: 'center',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+  borderRadius: '25px'
+    }}>
+     <div onClick={()=>navigate('/offer-page')} id='FontFamily'>
+      <h3 className='fw-bold w-75'>Get up to {product.discount} OFF!</h3>
       <p className='fw-bold  w-50'>Say Goodbye to bug bites</p>
      </div>
-     <button onClick={()=>navigate('/order-now')} className='btn btn-primary fw-semibold rounded-pill'>Order Now</button>
+     <button onClick={()=>navigate('/order-now')} className='btn btn-light fw-semibold rounded-pill'>Order Now</button>
     </div>
   )
 }
