@@ -5,6 +5,7 @@ import { Banner } from "../Components/Banner";
 import { OfferCard } from "../Components/OfferCard";
 import { Card } from "../Components/Card";
 import { useNavigate } from "react-router-dom";
+import { VerifyOtp } from "../Components/VerifyOtp";
 
 const Home = () => {
   const navigate=useNavigate()
@@ -35,14 +36,16 @@ const Home = () => {
           ))}
         </div>
 {/* ----->>>>>>>>>>>>>>> Category_Componet_----->>>>>>> */}
-<h4 onClick={()=>navigate('/category-wise-product')} className="text-success text-end">see all</h4>
-        <h3 className="mt-2">Book your order</h3>
+<div className="d-flex justify-content-between mt-2">
+<h3>Book your order</h3>
+<h4 onClick={()=>navigate('/category-wise-product')} className="seeAll text-success">see all</h4>
+</div>
 {/* ----->>>>>>>>>>>>>>> Cart_Componet_----->>>>>>> */}
         <div className="row justify-content-around">
         {
           ApiOfProducts.map((item)=>(
             <>
-            <div id="hovers" className="col-lg-2 col-md-3 col-sm-4 m-1 my-4">
+            <div id="hovers" className="col-lg-2 col-md-3 col-sm-4 mx-1 my-2">
                 <Card product={item} key={item.id} />
             </div>
             </>

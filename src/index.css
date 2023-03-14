@@ -25,3 +25,15 @@ input:focus{
 #FontFamily{
   font-family:'Times New Roman', Times, serif;
 }
+.offer_card_section :hover{
+  cursor: pointer;
+}
+.discount{
+  height: 25px;
+}
+.seeAll{
+  cursor: pointer;
+}
+.w{
+  width: 30px;
+}
