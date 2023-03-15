@@ -20,6 +20,8 @@ export const EmptyCart = () => {
       <div className="text-center">
         <button
           onClick={() => nevigate("/")}
+          data-bs-dismiss="offcanvas"
+            aria-label="Close"
           className="btn btn-success fw-semibold"
         >
           Start Shoping

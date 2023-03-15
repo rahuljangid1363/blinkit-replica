@@ -37,3 +37,9 @@ input:focus{
 .w{
   width: 30px;
 }
+.OTP{
+  background-color: rgb(216, 248, 248);
+  border: 1px solid grey;
+padding: 3px;
+  
+}

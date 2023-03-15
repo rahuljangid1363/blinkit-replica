@@ -3,6 +3,8 @@ import { NavLink, useNavigate } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 import { useState } from "react";
 import DeliveryLocation from "./DeliveryLocation";
+import Swal from "sweetalert2";
+import { BsCaretDownFill } from "react-icons/bs";
 import {
   AiFillAudio,
   AiOutlineSearch,
@@ -11,22 +13,30 @@ import {
 import { CartButton } from "../Pages/CartButton";
 import { VerifyOtp } from "./VerifyOtp";
 import { VerifyNumber } from "./VerifyNumber";
+import { useSelector } from "react-redux";
+import { CartButton2 } from "./CartButton2";
+
 
 const Navbar = () => {
+  const users=useSelector((state)=>state.users)
   const nevigate = useNavigate();
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const [data, setData] = useState(true);
-  function Otpdata() {
-    setData(false);
+  const [data,setdata]=useState(true);
+  const SendOtp=()=>{
+      setdata(false);
   }
-  function OTP() {
-    return <VerifyOtp />;
+  const ReNumPage=()=>{
+    setdata(true);
+}
+
+  const FinalState=()=>{
+    setdata(true);
   }
 
-  function MobileNumber() {
-    return <VerifyNumber />;
+  const SWAL=()=>{
+    Swal.fire("Successful", "You are logged in!", "success");
   }
 
   return (
@@ -69,14 +79,27 @@ const Navbar = () => {
                 className="align-self-center fs-3"
               />
             </div>
-            <NavLink
+
+{
+  data?(<button
               style={{ textDecoration: "none", color: "black" }}
-              className="align-self-center fs-5 fw-semibold"
+              className="align-self-center fs-5 fw-semibold border-0 bg-light"
               onClick={handleShow}
             >
-              <span>Login</span>
-            </NavLink>
-            <CartButton />
+              Login
+            </button>): (<button className="btn fs-5 d-flex">
+            <span className="align-self-center">Account</span>
+            <BsCaretDownFill className="align-self-center"/>
+            </button>)
+}
+
+            
+
+            
+            
+            {
+              (users.length==0)?<CartButton/>:<CartButton2/>
+            }
           </div>
         </div>
         <hr className="mb-0" id="hr" />
@@ -89,7 +112,9 @@ const Navbar = () => {
         keyboard={false}
       >
         <Modal.Header closeButton></Modal.Header>
-        {data ? <MobileNumber /> : <OTP />}
+        {
+          data?(<VerifyNumber SendOtp={SendOtp}/>):(<VerifyOtp handleClose={handleClose} FinalState={FinalState} SWAL={SWAL} ReNumPage={ReNumPage}/>)
+        }
       </Modal>
     </div>
   );

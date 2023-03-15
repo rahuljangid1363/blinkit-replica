@@ -1,16 +1,30 @@
 import React from 'react'
-export const VerifyNumber = () => {
+import { useState } from 'react';
+import { VerifyOtp } from './VerifyOtp';
+export const VerifyNumber = ({SendOtp}) => {
+  const [data, setData] = useState(false);
+const Success=(e)=>{
+  let o=e.target.value;
+  if(o.length==10){
+    setData(true)
+  }
+  else{
+    setData(false)
+  }
+}
+
   return (
     <div>
-      <div className="text-center">
-          <h4>Phone Number Verification </h4> <hr />
+      <div className="text-center pb-5">
+          <h4>Phone Number Verification </h4> 
           <p className="fs-5  text-center ">
             Enter your phone number to <br /> Login/Sign up
           </p>
           <input
-            className=" p-2 mb-3 rounded shadow border fw-bold text-primary"
+            className=" p-1 mb-3 rounded shadow border fw-bold fs-5 text-success"
             placeholder=" 📱 + 91-"
             type="tel"
+            maxLength={10}
             onChange={Success}
           />
           <br />
@@ -18,7 +32,7 @@ export const VerifyNumber = () => {
             <button
               className="btn btn-success w-25 mb-2"
               variant="primary"
-              onClick={Otpdata}
+              onClick={SendOtp}
             >
               Send OTP
             </button>
