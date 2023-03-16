@@ -1,5 +1,4 @@
 import Carousel from "react-bootstrap/Carousel";
-
 export function Banner() {
   return (
     <div className="container-fluid">
@@ -32,21 +31,3 @@ export function Banner() {
     </div>
   );
 }
-
-// export function Banner() {
-//     return (
-//       <>
-//         <div className="container-fluid mt-0">
-
-//             <div className="row">
-//               <div className="col-12">
-//                 <img className="w-100"
-//                   src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=1440/layout-engine/2022-05/Group-33704.jpg"
-//                   alt="Big Banner"
-//                 />
-//               </div>
-//             </div>
-//           </div>
-//       </>
-//     );
-//   }

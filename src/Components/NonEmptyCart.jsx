@@ -10,37 +10,35 @@ export const NonEmptyCart = () => {
         {" "}
         <span>{users.length}</span> items
       </p>
-      {users.map((item) => {
+
+           {users.map((item) => {
         return (
           <>
-            <div className="col border  mt-3 ">
+              <div className="my-4">
               <div className="row">
-                <div className="col-3">
-                  {" "}
-                  <img src={item.image} alt="apiData" width={100} />
-                </div>
-                <div className="col-9 align-self-center">
-                  <div className="row d-flex">
-                    <div className="col-7"> {item.about}</div>
-                    <div className="col-5">{item.quantity}</div>
-                  </div>
-                  <div className="row">
-                    <div className="col-7">₹{item.price}</div>
-                    <div className="col-5">
+                <div className="col-3"> <img src={item.image} alt="apiData" className="img-fluid img-thumbnail" /></div>
+            <div className="col-9 w-50">
+            {item.about} + Roach with Crushing....
+            <br />
+            <span className="text-secondary">1 pack</span>
+            </div>
+            </div>
+               <div className="row mt-1 fw-bold">
+                    <div className="col-3 offset-3 ">₹{item.price}</div>
+                    <div className="col-6 text-end">
                       <button
                         onClick={() => dispatch(remove(item))}
-                        className="btn btn-primary p-1"
+                        className="btn btn-success p-1"
                       >
                         Remove
                       </button>
-                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </>
+                </div>          
+
+              </div>          </>
         );
       })}
+       
     </div>
   );
 };

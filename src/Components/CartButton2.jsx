@@ -2,10 +2,9 @@ import React from 'react'
 import { NonEmptyCart } from "../Components/NonEmptyCart";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useSelector } from "react-redux";
-import { EmptyCart } from "../Components/EmptyCart"
+
 export const CartButton2 = () => {
     const users = useSelector((state) => state.users);
-    console.log("Users---->>>>",users);
   return (
     <div>
      <button className="btn btn-success fw-semibold" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">

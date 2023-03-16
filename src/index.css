@@ -1,6 +1,7 @@
 #hovers:hover{
-  border: 1px solid green;
-  box-shadow:0 8px 15px 15px rgba(0, 223, 78, 0.2);
+  border: 1px solid rgb(89, 191, 89);
+  /* box-shadow:0 8px 15px 15px rgba(0, 223, 78, 0.2); */
+transition-duration: 1.2s;
 }
 #hovers{
   border: 1px solid rgb(188, 188, 188);
@@ -42,4 +43,10 @@ input:focus{
   border: 1px solid grey;
 padding: 3px;
   
+}
+.CartButton{
+  background-color: green;
+}
+.lal{
+  height: 40px;
 }

@@ -206,6 +206,7 @@ export const Catagary = [
       "https://gpcdn.ams3.cdn.digitaloceanspaces.com/deals/bigbazaar%20(1).jpg",
     name: "Tea & Coffie",
   },
+  
   {
     id: 8,
     image:
@@ -215,51 +216,28 @@ export const Catagary = [
   {
     id: 9,
     image:
-      "https://media.clickoncare.com/catalog/product/cache/1/image/500x/9df78eab33525d08d6e5fb8d27136e95/h/i/himalaya-baby-care-gift-jar-pack-_1_-2247010339.jpg",
-    name: "Baby Care Products",
-  },
-  {
-    id: 10,
-    image:
       "https://gpcdn.ams3.cdn.digitaloceanspaces.com/deals/bigbazaar%20(1).jpg",
     name: "Tea & Coffie",
   },
   {
-    id: 11,
+    id: 10,
     image:
       "https://www.bigbasket.com/media/uploads/p/xxl/1200590-2_5-cadbury-dairy-milk-chocolate.jpg",
     name: "Chocolate",
   },
   {
-    id: 12,
+    id: 11,
     image:
       "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/71c39lgKkMS._SX522_PIbundle-12,TopRight,0,0_AA522SH20_.jpg",
     name: "Snacks",
   },
   {
-    id: 13,
+    id: 12,
     image:
       "https://149473553.v2.pressablecdn.com/wp-content/uploads/2020/05/Cool-Drinks-Soft-Drinks-Juice-copy.png",
     name: "Coldrink & Juice",
   },
-  {
-    id: 14,
-    image:
-      "https://5.imimg.com/data5/SELLER/Default/2021/12/XZ/AU/WJ/71996314/dog-dry-bath-500x500.jpeg",
-    name: "Pet Care Products",
-  },
-  {
-    id: 15,
-    image:
-      "https://5.imimg.com/data5/SELLER/Default/2022/5/TU/DA/HY/50535433/dryfruit-hamper-500x500.jpeg",
-    name: "Fruits & Vegitables",
-  },
-  {
-    id: 16,
-    image:
-      "https://5.imimg.com/data5/SELLER/Default/2022/5/NJ/GT/BM/13237041/pan-masala-candy-1000x1000.jpg",
-    name: "Paan Corner",
-  },
+  
 ];
 
 export const OfferCardApi = [

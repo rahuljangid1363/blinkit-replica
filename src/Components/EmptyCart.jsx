@@ -27,13 +27,18 @@ export const EmptyCart = () => {
           Start Shoping
         </button>
       </div>
+
+
+
+        <div className="d-flex flex-wrap justify-content-around">
       {ApiOfProducts.map((item) => (
         <>
-          <div className="col shadow my-3">
+          <div className="col-5  shadow my-3">
             <Card product={item} />
           </div>
         </>
       ))}
+        </div>
     </div>
   );
 };

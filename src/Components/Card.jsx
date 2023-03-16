@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { add, remove } from "../Reducers/UserReducer";
 import { useDispatch, useSelector } from "react-redux";
@@ -6,10 +6,14 @@ export const Card = ({ product }) => {
   const nevigate = useNavigate();
   const users = useSelector((state) => state.users);
   const dispatch = useDispatch();
+  const [CardButton, setCardButton] = useState(true);
+  const ChangeCardButton = () => {
+    setCardButton(false);
+  };
   return (
     <>
       <div>
-        <div className="discount border text-primary fw-semibold w-50 my-2 rounded-pill text-center">
+        <div className="discount fw-semibold w-50 my-2 rounded-end bg-primary text-light text-center">
           {product.discount}
         </div>
         <div className=" text-center ">
@@ -21,22 +25,49 @@ export const Card = ({ product }) => {
             className="img-fluid "
           />
         </div>
-        <p className="fw-semibold ">{product.about}</p>
-        <p>{product.quantity}</p>
+        <p className="">{product.about}</p>
+        <p className="text-secondary">{product.quantity}</p>
 
         <div className="col-12 d-flex justify-content-around">
-          <p className="fw-bold fs-5 ">₹{product.price}</p>
-          <button
-            className="btn btn-outline-success px-4 py-0 fw-semibold"
-            onClick={() => dispatch(add(product))}
-          >
-            {" "}
-            ADD{" "}
-          </button>
+          <p>₹{product.price}</p>
+
+          {CardButton ? (
+            <button
+              className="btn btn-outline-success h-50 mb-3 fw-semibold"
+              onClick={() => {
+                dispatch(add(product)), ChangeCardButton();
+              }}
+            >
+              ADD
+            </button>
+          ) : (
+            <div
+              className="CartButton  btn-group h-25 "
+              role="group"
+              aria-label="Basic example"
+            >
+              <button
+                type="button"
+                className="lal btn text-light fw-semibold fs-5 "
+              >
+                -
+              </button>
+              <button
+                type="button"
+                className="lal btn text-light fw-semibold fs-6 "
+              >
+                {users.length}
+              </button>
+              <button
+                type="button"
+                onClick={() => dispatch(add(product))}
+                className="lal btn text-light fw-semibold fs-5 "
+              >
+                +
+              </button>
+            </div>
+          )}
         </div>
-        <p className="text-center d-flex ">
-          Items : <span className="fs-5">{users.length}</span>
-        </p>
       </div>
     </>
   );

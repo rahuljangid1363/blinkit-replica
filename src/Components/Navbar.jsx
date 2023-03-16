@@ -1,10 +1,9 @@
 import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 import { useState } from "react";
 import DeliveryLocation from "./DeliveryLocation";
 import Swal from "sweetalert2";
-import { BsCaretDownFill } from "react-icons/bs";
 import {
   AiFillAudio,
   AiOutlineSearch,
@@ -34,11 +33,9 @@ const Navbar = () => {
   const FinalState=()=>{
     setdata(true);
   }
-
   const SWAL=()=>{
     Swal.fire("Successful", "You are logged in!", "success");
   }
-
   return (
     <div>
       <div className="container-fluid pt-3">
@@ -80,22 +77,12 @@ const Navbar = () => {
               />
             </div>
 
-{
-  data?(<button
-              style={{ textDecoration: "none", color: "black" }}
-              className="align-self-center fs-5 fw-semibold border-0 bg-light"
-              onClick={handleShow}
-            >
-              Login
-            </button>): (<button className="btn fs-5 d-flex">
-            <span className="align-self-center">Account</span>
-            <BsCaretDownFill className="align-self-center"/>
-            </button>)
+{<button style={{ textDecoration: "none", color: "black" }}
+  className="align-self-center fs-5 fw-semibold border-0 bg-light"
+   onClick={handleShow}>Login
+</button>
 }
 
-            
-
-            
             
             {
               (users.length==0)?<CartButton/>:<CartButton2/>

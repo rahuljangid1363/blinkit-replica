@@ -1,6 +1,5 @@
 import React from "react";
 import { BsCaretDownFill } from "react-icons/bs";
-
 const DeliveryLocation = () => {
   return (
     <div class="dropdown justify-content-between">
@@ -33,7 +32,7 @@ const DeliveryLocation = () => {
             <div class="modal-body d-flex justify-content-around">
               <div>
                 {" "}
-                <button className="btn btn-success">Detect my location </button>
+                <a href="https://www.google.com/maps/@26.9024647,75.7484713,13z" type="button" className="btn btn-success">Detect my location </a>
               </div>
               <div className="text-secondary">
                 --

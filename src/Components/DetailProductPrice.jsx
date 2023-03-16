@@ -8,28 +8,9 @@ export const DetailProductPrice = () => {
       </p>
       <h3 className="pb-3">Nested Milkmaid</h3>
       <div className="row justify-content-around mt-2">
-        <div className="col-3 border border-2 text-center pt-3 ">
-          {" "}
-          <input type="radio" name="r" id="r" /> <b>2 x (82 g)</b>
-          <p className="text-danger fs-6">out of stock</p>
-        </div>
-        <div className="col-3 border border-2 text-center pt-3">
-          <input type="radio" name="r" id="r" /> <b>3 x 82 g</b>
-          <p>
-            ₹54{" "}
-            <s
-              style={{
-                textDecoration: "lineThrough",
-              }}
-            >
-              68
-            </s>{" "}
-          </p>
-        </div>
-        <div className="col-3 border border-2 text-center pt-3">
-          <input type="radio" name="r" id="r" /> <b>82 g</b>
-          <p>₹20</p>
-        </div>
+        <OfferOnPerticularProduct productQty={'2 x 82gm'} color={'red'} availability={'Out of Stock'}/>
+        <OfferOnPerticularProduct productQty={'3 x 82gm'} color={'green'} availability={'Available'}/>
+        <OfferOnPerticularProduct productQty={'2 x 82gm'} color={'green'} availability={'Available'}/>
       </div>
       <button
         onClick={() => dispatch(add(item))}
@@ -92,3 +73,14 @@ export const DetailProductPrice = () => {
     </div>
   );
 };
+
+export const OfferOnPerticularProduct=(props)=>{
+return(<>
+<div className="col-3 border border-1 rounded text-center pt-3 ">
+          {" "}
+          <input type="radio" name="r" id="r" /> <b>{props.productQty}</b>
+          <p className="fs-6 fw-semibold" style={{color:props.color}}>{props.availability}</p>
+        </div>
+</>)
+}
+
