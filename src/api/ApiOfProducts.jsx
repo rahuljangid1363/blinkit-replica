@@ -20,7 +20,7 @@ export const ApiOfProducts = [
     about: "Kingfisher Beer",
     quantity: "200gm",
     price: "87",
-    discount: " ",
+    discount: "",
   },
   {
     id: 3,
@@ -56,7 +56,7 @@ export const ApiOfProducts = [
     about: "Table White Eggs",
     quantity: "500gm",
     price: "120",
-    discount: "",
+    discount: "3% OFF",
   },
   {
     id: 7,
@@ -74,7 +74,7 @@ export const ApiOfProducts = [
     about: "Nested Milkmaid",
     quantity: "300gm",
     price: "207",
-    discount: "",
+    discount: "16% OFF",
   },
   {
     id: 9,

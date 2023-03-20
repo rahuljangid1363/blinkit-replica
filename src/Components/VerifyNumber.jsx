@@ -29,10 +29,6 @@ const Success=(e)=>{
     <input className="border fw-bold fs-5 text-success rounded-end " placeholder="" type="tel" maxLength={10} onChange={Success}/>
   </div>
 </div>
-
-
-
-         
           <br />
           {data ? (
             <button

@@ -38,7 +38,7 @@ export const CategaryNavbar = () => {
         </div>
 
         <button
-          class=" dropdown-toggle border-0 bg-light fw-semibold text-secondary "
+          className=" dropdown-toggle border-0 bg-light fw-semibold text-secondary "
           type="button"
           data-bs-toggle="dropdown"
           aria-expanded="false"
@@ -46,64 +46,64 @@ export const CategaryNavbar = () => {
         >
           More
         </button>
-        <ul class="dropdown-menu">
+        <ul className="dropdown-menu">
           <li>
-            <a onClick={() => nevigate("/veg")} class="dropdown-item" href="#">
+            <a onClick={() => nevigate("/veg")} className="dropdown-item" href="#">
               Daily Uses Products
             </a>
           </li>
           <li>
-            <a onClick={() => nevigate("/veg")} class="dropdown-item" href="#">
+            <a onClick={() => nevigate("/veg")} className="dropdown-item" href="#">
               Softdrink and Alcohol
             </a>
           </li>
           <li>
-            <a onClick={() => nevigate("/veg")} class="dropdown-item" href="#">
+            <a onClick={() => nevigate("/veg")} className="dropdown-item" href="#">
               Vegitables and Fresh Fruits
             </a>
           </li>
           <li>
-            <a onClick={() => nevigate("/veg")} class="dropdown-item" href="#">
+            <a onClick={() => nevigate("/veg")} className="dropdown-item" href="#">
               Breakfast,Launch and Dinner
             </a>
           </li>
           <li>
-            <a onClick={() => nevigate("/veg")} class="dropdown-item" href="#">
+            <a onClick={() => nevigate("/veg")} className="dropdown-item" href="#">
               Daily Uses Products
             </a>
           </li>
           <li>
-            <a onClick={() => nevigate("/veg")} class="dropdown-item" href="#">
+            <a onClick={() => nevigate("/veg")} className="dropdown-item" href="#">
               Softdrink and Alcohol
             </a>
           </li>
           <li>
-            <a onClick={() => nevigate("/veg")} class="dropdown-item" href="#">
+            <a onClick={() => nevigate("/veg")} className="dropdown-item" href="#">
               Vegitables and Fresh Fruits
             </a>
           </li>
           <li>
-            <a onClick={() => nevigate("/veg")} class="dropdown-item" href="#">
+            <a onClick={() => nevigate("/veg")} className="dropdown-item" href="#">
               Breakfast,Launch and Dinner
             </a>
           </li>
           <li>
-            <a onClick={() => nevigate("/veg")} class="dropdown-item" href="#">
+            <a onClick={() => nevigate("/veg")} className="dropdown-item" href="#">
               Daily Uses Products
             </a>
           </li>
           <li>
-            <a onClick={() => nevigate("/veg")} class="dropdown-item" href="#">
+            <a onClick={() => nevigate("/veg")} className="dropdown-item" href="#">
               Softdrink and Alcohol
             </a>
           </li>
           <li>
-            <a onClick={() => nevigate("/veg")} class="dropdown-item" href="#">
+            <a onClick={() => nevigate("/veg")} className="dropdown-item" href="#">
               Vegitables and Fresh Fruits
             </a>
           </li>
           <li>
-            <a onClick={() => nevigate("/veg")} class="dropdown-item" href="#">
+            <a onClick={() => nevigate("/veg")} className="dropdown-item" href="#">
               Breakfast,Launch and Dinner
             </a>
           </li>

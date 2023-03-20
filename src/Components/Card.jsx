@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { AiTwotoneThunderbolt } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
-import { add, remove } from "../Reducers/UserReducer";
+import { add, Remove } from "../Reducers/UserReducer";
 import { useDispatch, useSelector } from "react-redux";
 export const Card = ({ product }) => {
   const nevigate = useNavigate();
@@ -10,26 +11,32 @@ export const Card = ({ product }) => {
   const ChangeCardButton = () => {
     setCardButton(false);
   };
+ 
+
+
   return (
     <>
-      <div>
-        <div className="discount fw-semibold w-50 my-2 rounded-end bg-primary text-light text-center">
+      <div id="hovers" className=" mx-1 my-2 rounded ">
+       <div className="discount mt-2">
+       <span className=" w-lg-50 w-sm-25 my-2 rounded-end h-25 bg-primary text-light text-center">
           {product.discount}
-        </div>
-        <div className=" text-center ">
+        </span>
+       </div>
+       <div className="px-3">
+       <div className=" text-center ">
           <img
             onClick={() => nevigate("/details-of-item")}
             src={product.image}
             alt="ra"
             width={100}
-            className="img-fluid "
+            className="img-fluid"
           />
         </div>
-        <p className="">{product.about}</p>
-        <p className="text-secondary">{product.quantity}</p>
-
-        <div className="col-12 d-flex justify-content-around">
-          <p>₹{product.price}</p>
+        <span className="mins8 rounded px-1 "><AiTwotoneThunderbolt/>8 mins</span> <br />
+        <span className="">{product.about}</span><br />
+        <span className="text-secondary">{product.quantity}</span>
+        <div className="col-12 mt-3 d-flex justify-content-around">
+          <p className="align-self-center fw-semibold">₹{product.price}</p>
 
           {CardButton ? (
             <button
@@ -49,16 +56,16 @@ export const Card = ({ product }) => {
               <button
                 type="button"
                 className="lal btn text-light fw-semibold fs-5 "
+                onClick={()=>{dispatch(Remove(product.id))}}
               >
                 -
               </button>
-              <button
-                type="button"
-                className="lal btn text-light fw-semibold fs-6 "
+              <button 
+                type="button" className="lal btn text-light fw-semibold fs-6 "
               >
                 {users.length}
               </button>
-              <button
+              <button key={product.id}
                 type="button"
                 onClick={() => dispatch(add(product))}
                 className="lal btn text-light fw-semibold fs-5 "
@@ -68,6 +75,7 @@ export const Card = ({ product }) => {
             </div>
           )}
         </div>
+       </div>
       </div>
     </>
   );

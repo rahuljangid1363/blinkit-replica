@@ -11,7 +11,6 @@ import { Assistant } from "./Components/Assistant";
 import { CartButton } from "./Pages/CartButton";
 import { CategoryWiseProducts } from "./Pages/CategoryWiseProducts";
 import { VerifyOtp } from "./Components/VerifyOtp";
-
 function App() {
   return (
     <>
@@ -21,10 +20,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/" element={<Home />} />
           <Route path="/otp-varification" element={<VerifyOtp />} />
-          <Route
-            path="/category-wise-product"
-            element={<CategoryWiseProducts />}
-          />
+          <Route path="/category-wise-product" element={<CategoryWiseProducts />}/>
           <Route path="/assistant" element={<Assistant />} />
           <Route path="/order-now" element={<OrderNow />} />
           <Route path="/offer-page" element={<OfferPage />} />

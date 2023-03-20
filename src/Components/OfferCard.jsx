@@ -12,7 +12,7 @@ export const OfferCard = ({ product }) => {
   const navigate = useNavigate();
   return (
     <div
-      className="p-3 border text-light "
+      className="p-3 border text-light"
       style={{
         backgroundImage: `url(${product.image})`,
         backgroundPosition: "center",
@@ -26,7 +26,7 @@ export const OfferCard = ({ product }) => {
         id="FontFamily"
         className="offer_card_section"
       >
-        <h3 className="fw-bold w-75">Get up to {product.discount} OFF!</h3>
+        <h3 className="fw-bold w-75">Get up to {product.discount} <br /> OFF!</h3>
         <p className="fw-bold  w-50">Say Goodbye to bug bites</p>
       </div>
       <button

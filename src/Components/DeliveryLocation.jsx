@@ -2,7 +2,7 @@ import React from "react";
 import { BsCaretDownFill } from "react-icons/bs";
 const DeliveryLocation = () => {
   return (
-    <div class="dropdown justify-content-between">
+    <div className="dropdown justify-content-between text-lg-start text-center">
       <h5>Delivery in 14 Minutes</h5>
 
       <p data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -10,26 +10,26 @@ const DeliveryLocation = () => {
       </p>
 
       <div
-        class="modal fade"
+        className="modal fade"
         id="exampleModal"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog modal-dialog-">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-6" id="exampleModalLabel">
+        <div className="modal-dialog modal-dialog-">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h1 className="modal-title fs-6" id="exampleModalLabel">
                 Change Location
               </h1>
               <button
                 type="button"
-                class="btn-close"
+                className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body d-flex justify-content-around">
+            <div className="modal-body d-flex justify-content-around">
               <div>
                 {" "}
                 <a href="https://www.google.com/maps/@26.9024647,75.7484713,13z" type="button" className="btn btn-success">Detect my location </a>

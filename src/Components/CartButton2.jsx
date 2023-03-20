@@ -18,24 +18,24 @@ export const CartButton2 = () => {
    
       </button>
       <div
-        class="offcanvas offcanvas-end"
+        className="offcanvas offcanvas-end"
         data-bs-backdrop="static"
-        tabindex="-1"
+        tabIndex='-1'
         id="staticBackdrop"
         aria-labelledby="staticBackdropLabel"
       >
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="staticBackdropLabel">
+        <div className="offcanvas-header">
+          <h5 className="offcanvas-title" id="staticBackdropLabel">
             Cart
           </h5>
           <button
             type="button"
-            class="btn-close"
+            className="btn-close"
             data-bs-dismiss="offcanvas"
             aria-label="Close"
           ></button>
         </div>
-        <div class="offcanvas-body">
+        <div className="offcanvas-body">
            <NonEmptyCart />
         </div>
       </div>

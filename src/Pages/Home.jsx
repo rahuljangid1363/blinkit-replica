@@ -45,7 +45,7 @@ const Home = () => {
         {
           ApiOfProducts.map((item)=>(
             <>
-            <div id="hovers" className="col-lg-2 col-md-3 col-sm-4 mx-1 my-2 ">
+            <div className="col-lg-2 col-md-3  col-sm-4">
                 <Card product={item} key={item.id} />
             </div>
             </>

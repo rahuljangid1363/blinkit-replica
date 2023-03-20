@@ -27,14 +27,14 @@ const CatagaryOfItem = () => {
                 Sort By
                 <button
                   id="bttn"
-                  class="w-75 fw-semibold dropdown-toggle rounded text-success bg-light"
+                  className="w-75 fw-semibold dropdown-toggle rounded text-success bg-light"
                   type="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Relivance
                 </button>
-                <ul class="dropdown-menu border-success text-success">
+                <ul className="dropdown-menu border-success text-success">
                   <li className="d-flex ">
                     <input type="radio" name="y" />
                     <a className="dropdown-item" href="#">
