@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 const design = {
   backgroundImage:
@@ -29,12 +30,12 @@ export const OfferCard = ({ product }) => {
         <h3 className="fw-bold w-75">Get up to {product.discount} <br /> OFF!</h3>
         <p className="fw-bold  w-50">Say Goodbye to bug bites</p>
       </div>
-      <button
+      <Button variant="light"
         onClick={() => navigate("/order-now")}
-        className="btn btn-light fw-semibold rounded-pill"
+        className="fw-semibold rounded-pill"
       >
         Order Now
-      </button>
+      </Button>
     </div>
   );
 };

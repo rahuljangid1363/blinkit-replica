@@ -3,6 +3,6 @@ import UserReducer from "../Reducers/UserReducer";
 
 export default configureStore({
   reducer:{
-  users:UserReducer,
+  cart:UserReducer,
   }
 })

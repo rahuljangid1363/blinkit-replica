@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 export const CategaryNavbar = () => {
   const nevigate = useNavigate();
   return (
@@ -47,69 +47,57 @@ export const CategaryNavbar = () => {
           More
         </button>
         <ul className="dropdown-menu">
-          <li>
+        
             <a onClick={() => nevigate("/veg")} className="dropdown-item" href="#">
               Daily Uses Products
             </a>
-          </li>
-          <li>
+        
             <a onClick={() => nevigate("/veg")} className="dropdown-item" href="#">
               Softdrink and Alcohol
             </a>
-          </li>
-          <li>
+     
             <a onClick={() => nevigate("/veg")} className="dropdown-item" href="#">
               Vegitables and Fresh Fruits
             </a>
-          </li>
-          <li>
+        
             <a onClick={() => nevigate("/veg")} className="dropdown-item" href="#">
               Breakfast,Launch and Dinner
             </a>
-          </li>
-          <li>
+      
             <a onClick={() => nevigate("/veg")} className="dropdown-item" href="#">
               Daily Uses Products
             </a>
-          </li>
-          <li>
+    
             <a onClick={() => nevigate("/veg")} className="dropdown-item" href="#">
               Softdrink and Alcohol
             </a>
-          </li>
-          <li>
+
             <a onClick={() => nevigate("/veg")} className="dropdown-item" href="#">
               Vegitables and Fresh Fruits
             </a>
-          </li>
-          <li>
+ 
             <a onClick={() => nevigate("/veg")} className="dropdown-item" href="#">
               Breakfast,Launch and Dinner
             </a>
-          </li>
-          <li>
+
             <a onClick={() => nevigate("/veg")} className="dropdown-item" href="#">
               Daily Uses Products
             </a>
-          </li>
-          <li>
+
             <a onClick={() => nevigate("/veg")} className="dropdown-item" href="#">
               Softdrink and Alcohol
             </a>
-          </li>
-          <li>
+
             <a onClick={() => nevigate("/veg")} className="dropdown-item" href="#">
               Vegitables and Fresh Fruits
             </a>
-          </li>
-          <li>
+
             <a onClick={() => nevigate("/veg")} className="dropdown-item" href="#">
               Breakfast,Launch and Dinner
             </a>
-          </li>
+
         </ul>
       </row>
-      <Outlet />
     </div>
   );
 };

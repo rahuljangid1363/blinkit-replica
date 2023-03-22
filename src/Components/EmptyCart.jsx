@@ -2,8 +2,8 @@ import React from "react";
 import { Card } from "../Components/Card";
 import { useNavigate } from "react-router-dom";
 import { ApiOfProducts } from "../api/ApiOfProducts";
-export const EmptyCart = () => {
-  const nevigate = useNavigate();
+import { Button } from "react-bootstrap";
+export const EmptyCart = ({CloseCartData}) => {
   return (
     <div>
       <div className="col-12 text-center">
@@ -18,27 +18,18 @@ export const EmptyCart = () => {
       </h3>
       <p className="text-center ">Your favourite items are just a click away</p>
       <div className="text-center">
-        <button
-          onClick={() => nevigate("/")}
-          data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          className="btn btn-success fw-semibold"
-        >
-          Start Shoping
-        </button>
+        <Button variant="success" onClick={CloseCartData} > Start Shoping </Button>
       </div>
 
-
-
-        <div className="d-flex flex-wrap justify-content-around">
-      {ApiOfProducts.map((item) => (
-        <>
-          <div className="col-5  shadow my-3">
-            <Card product={item} />
-          </div>
-        </>
-      ))}
-        </div>
+      <div className="d-flex flex-wrap justify-content-around">
+        {ApiOfProducts.map((item) => (
+          <>
+            <div className="col-5  shadow my-3" key={item.id}>
+              <Card product={item} key={item.id} />
+            </div>
+          </>
+        ))}
+      </div>
     </div>
   );
 };

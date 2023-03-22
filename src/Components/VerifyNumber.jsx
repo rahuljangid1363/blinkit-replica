@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-import { VerifyOtp } from './VerifyOtp';
+import { Button } from 'react-bootstrap';
 export const VerifyNumber = ({SendOtp}) => {
   const [data, setData] = useState(false);
 const Success=(e)=>{
@@ -31,15 +31,14 @@ const Success=(e)=>{
 </div>
           <br />
           {data ? (
-            <button
-              className="btn btn-success w-25 mb-2"
-              variant="primary"
+            <Button variant="success"
+              className="w-25 mb-2"
               onClick={SendOtp}
             >
               Send OTP
-            </button>
+            </Button>
           ) : (
-            <button className="btn btn-secondary w-25 mb-2">Send OTP</button>
+            <Button variant='secondary' className="w-25 mb-2">Send OTP</Button>
           )}
           <p>By continuing, you agree to our</p>
           <a className="text-success px-1" href="#">

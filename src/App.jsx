@@ -8,7 +8,6 @@ import Home from "./Pages/Home";
 import { OfferPage } from "../src/Pages/OfferPage";
 import { OrderNow } from "./Pages/OrderNow";
 import { Assistant } from "./Components/Assistant";
-import { CartButton } from "./Pages/CartButton";
 import { CategoryWiseProducts } from "./Pages/CategoryWiseProducts";
 import { VerifyOtp } from "./Components/VerifyOtp";
 function App() {
@@ -27,7 +26,6 @@ function App() {
           <Route path="/trending" element={<Trending />} />
           <Route path="/veg" element={<Vegetables />} />
           <Route path="details-of-item" element={<DetailsOfItem />} />
-          <Route path="/cart" element={<CartButton />} />
           <Route path="catagary" element={<CatagaryOfItem />} />
         </Routes>
       </BrowserRouter>

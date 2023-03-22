@@ -10,8 +10,9 @@ export const ApiOfProducts = [
     e: "https://dineshsupermarket.in/uploads/media/2022/nestle-milkmaid-condensed-milk-400-gm-tin-0-20200518-247x296.jpg",
     about: "Nested Milkmaid",
     quantity: "300gm",
-    price: "207",
-    discount: "15% OFF",
+    price: 207,
+    offer: "15% OFF",
+    discount:6
   },
   {
     id: 2,
@@ -20,7 +21,8 @@ export const ApiOfProducts = [
     about: "Kingfisher Beer",
     quantity: "200gm",
     price: "87",
-    discount: "",
+    offer: "",
+    discount:4
   },
   {
     id: 3,
@@ -29,7 +31,8 @@ export const ApiOfProducts = [
     about: "Amul Masti Crud",
     quantity: "250gm",
     price: "307",
-    discount: "",
+    offer: "",
+    discount:2
   },
   {
     id: 4,
@@ -38,7 +41,8 @@ export const ApiOfProducts = [
     about: "Table White Eggs",
     quantity: "500gm",
     price: "120",
-    discount: "8% OFF",
+    offer: "8% OFF",
+    discount:3
   },
   {
     id: 5,
@@ -47,7 +51,8 @@ export const ApiOfProducts = [
     about: "Amul Fresh Milk",
     quantity: "250gm",
     price: "40",
-    discount: "",
+    offer: "",
+    discount:8
   },
   {
     id: 6,
@@ -56,7 +61,8 @@ export const ApiOfProducts = [
     about: "Table White Eggs",
     quantity: "500gm",
     price: "120",
-    discount: "3% OFF",
+    offer: "3% OFF",
+    discount:12
   },
   {
     id: 7,
@@ -65,7 +71,8 @@ export const ApiOfProducts = [
     about: "Amul Masti Crud",
     quantity: "250gm",
     price: "307",
-    discount: "",
+    offer: "",
+    discount:7
   },
   {
     id: 8,
@@ -74,7 +81,8 @@ export const ApiOfProducts = [
     about: "Nested Milkmaid",
     quantity: "300gm",
     price: "207",
-    discount: "16% OFF",
+    offer: "16% OFF",
+    discount:6
   },
   {
     id: 9,
@@ -83,7 +91,8 @@ export const ApiOfProducts = [
     about: "Nested Milkmaid",
     quantity: "300gm",
     price: "207",
-    discount: "",
+    offer: "",
+    discount:5
   },
   {
     id: 10,
@@ -92,7 +101,8 @@ export const ApiOfProducts = [
     about: "Nested Milkmaid",
     quantity: "300gm",
     price: "207",
-    discount: "",
+    offer: "",
+    discount:2
   },
   {
     id: 11,
@@ -101,7 +111,8 @@ export const ApiOfProducts = [
     about: "Nested Milkmaid",
     quantity: "300gm",
     price: "207",
-    discount: "",
+    offer: "",
+    discount:1
   },
   {
     id: 12,
@@ -110,7 +121,8 @@ export const ApiOfProducts = [
     about: "Nested Milkmaid",
     quantity: "300gm",
     price: "207",
-    discount: "",
+    offer: "",
+    discount:7
   },
   {
     id: 13,
@@ -119,7 +131,8 @@ export const ApiOfProducts = [
     about: "Kingfisher Beer",
     quantity: "200gm",
     price: "87",
-    discount: "",
+    offer: "",
+    discount:11
   },
   {
     id: 14,
@@ -128,6 +141,8 @@ export const ApiOfProducts = [
     about: "Amul Masti Crud",
     quantity: "250gm",
     price: "307",
+    offer: "",
+    discount:4
   },
   {
     id: 15,
@@ -136,6 +151,8 @@ export const ApiOfProducts = [
     about: "Table White Eggs",
     quantity: "500gm",
     price: "120",
+    offer: "",
+    discount:9
   },
   {
     id: 16,
@@ -144,6 +161,8 @@ export const ApiOfProducts = [
     about: "Amul Fresh Milk",
     quantity: "250gm",
     price: "40",
+    offer: "",
+    discount:5
   },
   {
     id: 17,
@@ -152,6 +171,8 @@ export const ApiOfProducts = [
     about: "Table White Eggs",
     quantity: "500gm",
     price: "120",
+    offer: "",
+    discount:8
   },
   {
     id: 18,
@@ -160,6 +181,8 @@ export const ApiOfProducts = [
     about: "Table White Eggs",
     quantity: "500gm",
     price: "120",
+    offer: "",
+    discount:10
   },
 ];
 

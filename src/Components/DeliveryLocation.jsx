@@ -2,12 +2,14 @@ import React from "react";
 import { BsCaretDownFill } from "react-icons/bs";
 const DeliveryLocation = () => {
   return (
-    <div className="dropdown justify-content-between text-lg-start text-center">
+    <div className="dropdown justify-content-between ">
+      
+      <div className="d-lg-block d-flex justify-content-around mt-lg-0 mt-2">
       <h5>Delivery in 14 Minutes</h5>
-
       <p data-bs-toggle="modal" data-bs-target="#exampleModal">
         Jaipur, Rajasthan, India <BsCaretDownFill />
       </p>
+      </div>
 
       <div
         className="modal fade"

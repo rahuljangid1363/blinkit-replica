@@ -9,7 +9,7 @@ const Trending = () => {
        <div className="row">
           <h5 className="py-2"><AiOutlineRise/> Trending </h5>
           {ApiOfProducts.map((item) => (
-            <div className="col-1 rounded ">
+            <div className="col-1 rounded " key={item.id}>
               <img src={item.image} alt="dfdf" width={60} className='img-fluid img-thumbnail' />
               <p style={{ fontSize: "11px", textAlign: "center" }}>
                 {item.about}

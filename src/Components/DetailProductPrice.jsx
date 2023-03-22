@@ -76,8 +76,7 @@ export const DetailProductPrice = () => {
 
 export const OfferOnPerticularProduct=(props)=>{
 return(<>
-<div className="col-3 border border-1 rounded text-center pt-3 ">
-          {" "}
+<div className="col-3 border border-1 rounded text-center pt-3 " key={props.id} >
           <input type="radio" name="r" id="r" /> <b>{props.productQty}</b>
           <p className="fs-6 fw-semibold" style={{color:props.color}}>{props.availability}</p>
         </div>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button } from "react-bootstrap";
 import OtpInput from "react18-input-otp";
 export const VerifyOtp = ({ handleClose, FinalState, SWAL, ReNumPage }) => {
   const [otp, setOtp] = useState("");
@@ -17,20 +18,20 @@ export const VerifyOtp = ({ handleClose, FinalState, SWAL, ReNumPage }) => {
         />
       </div>
       <div className="text-center">
-        <button
-          className="btn btn-secondary m-1 w-25 mb-3"
+        <Button variant="secondary"
+          className="m-1 w-25 mb-3"
           onClick={() => ReNumPage()}
         >
           Back
-        </button>
-        <button
-          className="btn btn-success m-1 w-25 mb-3"
+        </Button>
+        <Button variant="success"
+          className="m-1 w-25 mb-3"
           onClick={() => {
             FinalState(), handleClose(), SWAL();
           }}
         >
           Submit
-        </button>
+        </Button>
         <br />
         <a className="text-danger  ">resend code</a>
       </div>

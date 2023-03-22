@@ -9,8 +9,8 @@ export const CategoryWiseProducts = () => {
         <CategaryNavbar />
         <div className="row">
           {ApiOfProducts.map((item) => (
-            <div className="col-lg-2 col-md-3 col-sm-4 text-center shadow my-3">
-              <Card product={item} />
+            <div className="col-lg-2 col-md-3 col-sm-4 text-center shadow my-3" key={item.id} >
+              <Card product={item} key={item.id}/>
             </div>
           ))}
         </div>

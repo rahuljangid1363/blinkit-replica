@@ -3,9 +3,10 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
-import { useState } from "react";
+import { useState,  useEffect } from "react";
 import DeliveryLocation from "./DeliveryLocation";
 import Swal from "sweetalert2";
+
 import {
   AiFillAudio,
   AiOutlineSearch,
@@ -14,15 +15,21 @@ import {
   AiOutlineWhatsApp,
   AiFillAndroid,
   AiFillApple,
+  AiOutlineShoppingCart,
 } from "react-icons/ai";
-import { CartButton } from "../Pages/CartButton";
+
 import { VerifyOtp } from "./VerifyOtp";
 import { VerifyNumber } from "./VerifyNumber";
 import { useSelector } from "react-redux";
-import { CartButton2 } from "./CartButton2";
+import { EmptyCart } from "./EmptyCart";
+import { NonEmptyCart } from "./NonEmptyCart";
 
 const Navbar = () => {
-  const users = useSelector((state) => state.users);
+const [cartOffCanvas,setCartOffCanvas]=useState(false)
+const ShowCartData=()=>{setCartOffCanvas(true)}
+const CloseCartData=()=>{setCartOffCanvas(false)}
+
+  const cart = useSelector((state) => state.cart);
   const nevigate = useNavigate();
   const [offCanvas, setOffCanvas] = useState(false);
   const handleOff = () => setOffCanvas(false);
@@ -31,6 +38,14 @@ const Navbar = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [data, setdata] = useState(true);
+
+  const [price,setprice]=useState(null);
+  const [totalDiscount,setTotalDiscount]=useState(0)
+  useEffect(()=>{
+    setprice(()=>cart.reduce((acc,cutacc)=>acc+Number(cutacc.price),0))
+    setTotalDiscount(()=>cart.reduce((acc,cutacc)=>acc+Number(cutacc.discount),0))
+  },[cart])
+
   const SendOtp = () => {
     setdata(false);
   };
@@ -47,20 +62,18 @@ const Navbar = () => {
   return (
     <div>
       <div className="container-fluid pt-3">
+      <h1>Discount{totalDiscount}</h1>
         <div className="row d-flex ">
           <div className="col-lg-4 ">
             <div className="row ">
               <div className="col-lg-6 d-flex  justify-content-between">
-              <span className="d-lg-none d-flex ">
-                  {users.length == 0 ? <CartButton /> : <CartButton2 />}
-                </span>
                 <img
                   onClick={() => nevigate("/")}
                   src="https://d35fo82fjcw0y8.cloudfront.net/2022/01/25060423/Blinkit_Logo%402x.png"
                   height={55}
                   alt="Blinket"
                 />
-                
+
                 <Button
                   variant="primary"
                   onClick={handleOn}
@@ -101,7 +114,32 @@ const Navbar = () => {
                 Login
               </button>
             }
-            {users.length == 0 ? <CartButton /> : <CartButton2 />}
+
+         
+         <div onClick={ShowCartData}>
+         {cart.length == 0 ? (
+              <Button variant="success" className="fw-semibold">
+             < AiOutlineShoppingCart  className="fs-4 my-2"/>  My Cart 
+              </Button>
+            ) : (
+              <Button variant="success" className="fw-semibold">
+              < AiOutlineShoppingCart  className="fs-4"/>  {cart.length} items
+              <br /><span>₹ {price}</span>
+              </Button>
+            )}
+         </div>
+
+            <Offcanvas show={cartOffCanvas} onHide={CloseCartData} placement={'end'}>
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title><b>My Cart</b></Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+               {
+                cart.length==0?<EmptyCart CloseCartData={CloseCartData}/>: <NonEmptyCart price={price} totalDiscount={totalDiscount}/>
+               }
+              </Offcanvas.Body>
+            </Offcanvas>
+
           </div>
         </div>
 
@@ -142,23 +180,23 @@ const Navbar = () => {
         <Offcanvas.Body>
           <div className="d-flex justify-content-between mb-3">
             <div>
-              <button
-                className="btn btn-dark fw-semibold rounded-pill px-4"
+              <Button variant="dark"
+                className="fw-semibold rounded-pill px-4"
                 onClick={handleShow}
               >
                 Login
-              </button>
+              </Button>
             </div>
 
             <div>
-              <button
-                className="btn btn-primary fw-semibold rounded-pill px-4 "
+              <Button variant="primary"
+                className="fw-semibold rounded-pill px-4 "
                 onClick={() => {
                   nevigate("/"), handleOff();
                 }}
               >
                 Home
-              </button>
+              </Button>
             </div>
           </div>
           <p className="border p-1 shadow fw-semibold rounded">Contact us</p>
