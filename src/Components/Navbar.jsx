@@ -45,6 +45,7 @@ const CloseCartData=()=>{setCartOffCanvas(false)}
     setprice(()=>cart.reduce((acc,cutacc)=>acc+Number(cutacc.price),0))
     setTotalDiscount(()=>cart.reduce((acc,cutacc)=>acc+Number(cutacc.discount),0))
   },[cart])
+  const payablePrice=price-totalDiscount;
 
   const SendOtp = () => {
     setdata(false);
@@ -62,7 +63,6 @@ const CloseCartData=()=>{setCartOffCanvas(false)}
   return (
     <div>
       <div className="container-fluid pt-3">
-      <h1>Discount{totalDiscount}</h1>
         <div className="row d-flex ">
           <div className="col-lg-4 ">
             <div className="row ">
@@ -124,7 +124,7 @@ const CloseCartData=()=>{setCartOffCanvas(false)}
             ) : (
               <Button variant="success" className="fw-semibold">
               < AiOutlineShoppingCart  className="fs-4"/>  {cart.length} items
-              <br /><span>₹ {price}</span>
+              <br /><span>₹ {payablePrice}</span>
               </Button>
             )}
          </div>
@@ -135,7 +135,7 @@ const CloseCartData=()=>{setCartOffCanvas(false)}
               </Offcanvas.Header>
               <Offcanvas.Body>
                {
-                cart.length==0?<EmptyCart CloseCartData={CloseCartData}/>: <NonEmptyCart price={price} totalDiscount={totalDiscount}/>
+                cart.length==0?<EmptyCart CloseCartData={CloseCartData}/>: <NonEmptyCart price={price} totalDiscount={totalDiscount} payablePrice={payablePrice} handleShow={handleShow}/>
                }
               </Offcanvas.Body>
             </Offcanvas>

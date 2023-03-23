@@ -1,6 +1,7 @@
 export const ApiOfProducts = [
   {
     id: 1,
+    quantity:1,
     image:
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/10491a.jpg",
     a: "https://www.bigbasket.com/media/uploads/p/xxl/266070_11-nestle-milkmaid-sweetened-condensed-milk.jpg",
@@ -9,180 +10,197 @@ export const ApiOfProducts = [
     d: "https://www.bigbasket.com/media/uploads/p/xxl/266070-4_11-nestle-milkmaid-sweetened-condensed-milk.jpg",
     e: "https://dineshsupermarket.in/uploads/media/2022/nestle-milkmaid-condensed-milk-400-gm-tin-0-20200518-247x296.jpg",
     about: "Nested Milkmaid",
-    quantity: "300gm",
+    weight: "300gm",
     price: 207,
     offer: "15% OFF",
-    discount:6
+    discount:31.5
   },
   {
     id: 2,
+    quantity:1,
     image:
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/24194a.jpg?ts=1661157751",
     about: "Kingfisher Beer",
-    quantity: "200gm",
+    weight: "200gm",
     price: "87",
     offer: "",
-    discount:4
+    discount:0  
   },
   {
     id: 3,
+    quantity:1,
     image:
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/45533a.jpg?ts=1654845569",
     about: "Amul Masti Crud",
-    quantity: "250gm",
+    weight: "250gm",
     price: "307",
     offer: "",
-    discount:2
+    discount:0
   },
   {
     id: 4,
+    quantity:1,
     image:
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/483705a.jpg?ts=1657805510",
     about: "Table White Eggs",
-    quantity: "500gm",
+    weight: "500gm",
     price: "120",
     offer: "8% OFF",
-    discount:3
+    discount:9.6
   },
   {
     id: 5,
+    quantity:1,
     image:
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/19512a.jpg?ts=1647923044",
     about: "Amul Fresh Milk",
-    quantity: "250gm",
+    weight: "250gm",
     price: "40",
     offer: "",
-    discount:8
+    discount:0
   },
   {
     id: 6,
+    quantity:1,
     image:
-      "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/483705a.jpg?ts=1657805510",
-    about: "Table White Eggs",
-    quantity: "500gm",
+      "https://5.imimg.com/data5/IG/GI/MY-69718924/ice-cream-cup-500x500.jpg",
+    about: "Ice-Cream",
+    weight: "500gm",
     price: "120",
     offer: "3% OFF",
-    discount:12
+    discount:3.6
   },
   {
     id: 7,
+    quantity:1,
     image:
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/45533a.jpg?ts=1654845569",
     about: "Amul Masti Crud",
-    quantity: "250gm",
+    weight: "250gm",
     price: "307",
     offer: "",
-    discount:7
+    discount:0
   },
   {
     id: 8,
+    quantity:1,
     image:
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/10491a.jpg",
     about: "Nested Milkmaid",
-    quantity: "300gm",
+    weight: "300gm",
     price: "207",
     offer: "16% OFF",
-    discount:6
+    discount:33.12
   },
   {
     id: 9,
+    quantity:1,
     image:
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/10491a.jpg",
     about: "Nested Milkmaid",
-    quantity: "300gm",
+    weight: "300gm",
     price: "207",
     offer: "",
-    discount:5
+    discount:0
   },
   {
     id: 10,
+    quantity:1,
     image:
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/10491a.jpg",
     about: "Nested Milkmaid",
-    quantity: "300gm",
+    weight: "300gm",
     price: "207",
     offer: "",
-    discount:2
+    discount:0
   },
   {
     id: 11,
+    quantity:1,
     image:
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/10491a.jpg",
     about: "Nested Milkmaid",
-    quantity: "300gm",
+    weight: "300gm",
     price: "207",
-    offer: "",
-    discount:1
+    offer: "6% OFF",
+    discount:12.42
   },
   {
     id: 12,
+    quantity:1,
     image:
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/10491a.jpg",
     about: "Nested Milkmaid",
-    quantity: "300gm",
+    weight: "300gm",
     price: "207",
     offer: "",
-    discount:7
+    discount:0
   },
   {
     id: 13,
+    quantity:1,
     image:
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/24194a.jpg?ts=1661157751",
     about: "Kingfisher Beer",
-    quantity: "200gm",
+    weight: "200gm",
     price: "87",
-    offer: "",
-    discount:11
+    offer: "2% OFF",
+    discount:1.74
   },
   {
     id: 14,
+    quantity:1,
     image:
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/45533a.jpg?ts=1654845569",
     about: "Amul Masti Crud",
-    quantity: "250gm",
+    weight: "250gm",
     price: "307",
     offer: "",
-    discount:4
+    discount:0
   },
   {
     id: 15,
+    quantity:1,
     image:
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/483705a.jpg?ts=1657805510",
     about: "Table White Eggs",
-    quantity: "500gm",
+    weight: "500gm",
     price: "120",
-    offer: "",
-    discount:9
+    offer: "7% OFF",
+    discount:8.40
   },
   {
     id: 16,
+    quantity:1,
     image:
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/19512a.jpg?ts=1647923044",
     about: "Amul Fresh Milk",
-    quantity: "250gm",
+    weight: "250gm",
     price: "40",
     offer: "",
-    discount:5
+    discount:0
   },
   {
     id: 17,
+    quantity:1,
     image:
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/483705a.jpg?ts=1657805510",
     about: "Table White Eggs",
-    quantity: "500gm",
+    weight: "500gm",
     price: "120",
-    offer: "",
-    discount:8
+    offer: "3% OFF",
+    discount:3.60
   },
   {
     id: 18,
+    quantity:1,
     image:
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/483705a.jpg?ts=1657805510",
     about: "Table White Eggs",
-    quantity: "500gm",
+    weight: "500gm",
     price: "120",
     offer: "",
-    discount:10
+    discount:0
   },
 ];
 

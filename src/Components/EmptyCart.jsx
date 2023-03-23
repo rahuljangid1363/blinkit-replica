@@ -1,11 +1,9 @@
 import React from "react";
 import { Card } from "../Components/Card";
-import { useNavigate } from "react-router-dom";
 import { ApiOfProducts } from "../api/ApiOfProducts";
 import { Button } from "react-bootstrap";
 export const EmptyCart = ({CloseCartData}) => {
-  return (
-    <div>
+  return (<>
       <div className="col-12 text-center">
         <img
           src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/24885/cart-clipart-xl.png"
@@ -30,6 +28,6 @@ export const EmptyCart = ({CloseCartData}) => {
           </>
         ))}
       </div>
-    </div>
+      </>
   );
 };
