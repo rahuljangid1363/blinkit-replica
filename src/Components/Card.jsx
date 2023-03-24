@@ -40,7 +40,7 @@ export const Card = ({ product }) => {
           <div className="col-12 mt-3 d-flex justify-content-around">
             <p className="align-self-center fw-semibold">₹{product.price}</p>
 
-            {cart.some((item) => item.id === product.id) ? (
+            {cart.some((item) => item.id === product.id && item.quantity!=0) ? (
               <ButtonGroup aria-label="Basic example" className="mb-2">
                 <Button
                   variant="success"
@@ -49,8 +49,7 @@ export const Card = ({ product }) => {
                   +
                 </Button>
                 
-                  {/* <Button variant="success">{product.quantity}</Button>
-                  {console.log('----/-->',product.quantity)} */}
+    { cart.map((item)=>item.id===product.id?(<Button variant="success">{item.quantity}</Button>):(<></>)) }
                   
                 <Button
                   variant="success"

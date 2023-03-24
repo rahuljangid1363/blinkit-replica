@@ -1,12 +1,18 @@
 import { useDispatch, useSelector } from "react-redux";
-import { remove } from "../Reducers/UserReducer";
+import { remove,increment,decrement,add } from "../Reducers/UserReducer";
 import { AiFillCaretRight } from "react-icons/ai";
+import ButtonGroup from "react-bootstrap/ButtonGroup";
 import { Button } from "react-bootstrap";
+import { useEffect, useState } from "react";
 export const NonEmptyCart = (props) => {
   const {price,totalDiscount,payablePrice,handleShow}=props;
 const cart = useSelector((state) => state.cart);
 const dispatch = useDispatch();
-
+console.log('---0000----',price)
+// const [Quantity,setQuantity]=useState()
+// useEffect(()=>{
+//   setQuantity(()=>cart.reduce((acc,cutacc)=>acc+Number(cutacc.price),0))
+// },[cart])
   return (
     <>
         <b>Delivery in 14 Minutes</b>
@@ -15,9 +21,9 @@ const dispatch = useDispatch();
         </p>
 
       <div className="">
-        {cart.map((product) => {
+        {cart.map((product,key) => {
             return (
-            <div className="my-4" key={product.id}>
+            <div className="my-4" key={key}>
               <div className="row">
                 <div className="col-3">
                   <img
@@ -27,22 +33,53 @@ const dispatch = useDispatch();
                   />
                    
                 </div>
-                <div className="col-9 w-50">
+                <div className="col-5">
                   {product.about} + Roach with Crushing....
                   <br />
                   <span className="text-secondary">1 pack</span>
                 </div>
+                <div className="col-4 fw-semibold text-secondary">
+                Quantity : {
+                      cart.map((item)=>item.id===product.id ? (<span className="fs-5">{product.quantity}</span>):(<></>))
+                    }
+                </div>
               </div>
               <div className="row">
               <div className="col-3 text-center"><span className="bg-primary rounded text-light" style={{fontSize:'13px'}}>{product.offer}</span></div>
-                <div className="col-5 text-center fw-bold ">₹{product.price}</div>
+                <div className="col-5 fs-5 fw-bold">
+                    <del className="text-secondary fs-6">₹{product.price}</del> ₹{product.price-product.discount}
+                </div>
                 <div className="col-4 text-center">
-                  <Button variant="success"
-                    onClick={() => dispatch(remove(product.id))}
-                    className="p-1"
-                  >
-                    Remove
+
+
+
+
+                {cart.some((item) => item.id === product.id && item.quantity!=0) ? (
+              <ButtonGroup aria-label="Basic example" className="mb-2">
+                <Button
+                  variant="success"
+                  onClick={() => dispatch(increment(product.id))}
+                >
+                  +
+                </Button>
+                
+             { cart.map((item)=>item.id===product.id?(<Button variant="success">{item.quantity}</Button>):(<></>)) }
+                  
+                <Button
+                  variant="success"
+                  onClick={() =>  dispatch(decrement(product.id))}
+                >
+                  -
+                </Button>
+              </ButtonGroup>
+            ) : (
+              <Button variant="success"
+                    onClick={() => {dispatch(remove(product.id))}}
+                    className="p-1">Remove
                   </Button>
+             
+            )}
+
                 </div>
               </div>
             </div>
@@ -50,7 +87,8 @@ const dispatch = useDispatch();
           
         })}
       </div>
-      <p className="fw-semibold">weight of Products : {cart.length}</p>
+      
+     
       <p className="fw-semibold">Total MRP : ₹{price} </p>
       <p className="fw-semibold">Total Discount : ₹{totalDiscount}</p>
       <p className="fw-semibold">Payable Amount : ₹{payablePrice}</p>

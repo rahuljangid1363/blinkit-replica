@@ -39,11 +39,12 @@ const CloseCartData=()=>{setCartOffCanvas(false)}
   const handleShow = () => setShow(true);
   const [data, setdata] = useState(true);
 
-  const [price,setprice]=useState(null);
+  const [price,setPrice]=useState();
   const [totalDiscount,setTotalDiscount]=useState(0)
+
   useEffect(()=>{
-    setprice(()=>cart.reduce((acc,cutacc)=>acc+Number(cutacc.price),0))
-    setTotalDiscount(()=>cart.reduce((acc,cutacc)=>acc+Number(cutacc.discount),0))
+    setTotalDiscount(()=>cart.reduce((acc,cutacc)=>acc+Number(cutacc.discount*cutacc.quantity),0))
+    setPrice(()=>cart.reduce((acc,cutacc)=>acc+Number(cutacc.price*cutacc.quantity),0))
   },[cart])
   const payablePrice=price-totalDiscount;
 
@@ -62,11 +63,11 @@ const CloseCartData=()=>{setCartOffCanvas(false)}
   };
   return (
     <div>
-      <div className="container-fluid pt-3">
-        <div className="row d-flex ">
+      <div className="container-fluid pt-3 ">
+        <div className="row d-flex border-bottom">
           <div className="col-lg-4 ">
             <div className="row ">
-              <div className="col-lg-6 d-flex  justify-content-between">
+              <div className="col-lg-6 d-flex  justify-content-between border-end">
                 <img
                   onClick={() => nevigate("/")}
                   src="https://d35fo82fjcw0y8.cloudfront.net/2022/01/25060423/Blinkit_Logo%402x.png"
@@ -135,7 +136,7 @@ const CloseCartData=()=>{setCartOffCanvas(false)}
               </Offcanvas.Header>
               <Offcanvas.Body>
                {
-                cart.length==0?<EmptyCart CloseCartData={CloseCartData}/>: <NonEmptyCart price={price} totalDiscount={totalDiscount} payablePrice={payablePrice} handleShow={handleShow}/>
+                cart.length==0?<EmptyCart CloseCartData={CloseCartData}/>: <NonEmptyCart price={price} totalDiscount={totalDiscount} payablePrice={payablePrice} handleShow={handleShow} />
                }
               </Offcanvas.Body>
             </Offcanvas>
@@ -143,7 +144,7 @@ const CloseCartData=()=>{setCartOffCanvas(false)}
           </div>
         </div>
 
-        <hr className="mb-0" id="hr" />
+     
       </div>
 
       <Modal

@@ -6,10 +6,10 @@ export const CategoryCard = ({ product }) => {
   return (
     <div
       onClick={() => nevigate("catagary")}
-      className="text-center"
+      className="text-center" 
     >
       <img
-        className="img-fluid img-thumbnail"
+        className="img-fluid img-thumbnail" 
         src={product.image}
         alt="reer"
         width={130}

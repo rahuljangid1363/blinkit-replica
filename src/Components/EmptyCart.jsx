@@ -8,7 +8,7 @@ export const EmptyCart = ({CloseCartData}) => {
         <img
           src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/24885/cart-clipart-xl.png"
           alt="sd"
-          width={200}
+          width={150}
         />
       </div>
       <h3 className="text-center mt-4 text-secondary">

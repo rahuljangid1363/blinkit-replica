@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import OtpInput from "react18-input-otp";
 export const VerifyOtp = ({ handleClose, FinalState, SWAL, ReNumPage }) => {
   const [otp, setOtp] = useState("");
+  const [counting,setCounting]=useState(0)
+ 
+
   const handleChange = (enteredOtp) => {
     setOtp(enteredOtp);
   };

@@ -22,7 +22,7 @@ export const ApiOfProducts = [
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/24194a.jpg?ts=1661157751",
     about: "Kingfisher Beer",
     weight: "200gm",
-    price: "87",
+    price: 87,
     offer: "",
     discount:0  
   },
@@ -33,7 +33,7 @@ export const ApiOfProducts = [
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/45533a.jpg?ts=1654845569",
     about: "Amul Masti Crud",
     weight: "250gm",
-    price: "307",
+    price: 307,
     offer: "",
     discount:0
   },
@@ -44,7 +44,7 @@ export const ApiOfProducts = [
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/483705a.jpg?ts=1657805510",
     about: "Table White Eggs",
     weight: "500gm",
-    price: "120",
+    price: 120,
     offer: "8% OFF",
     discount:9.6
   },
@@ -55,7 +55,7 @@ export const ApiOfProducts = [
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/19512a.jpg?ts=1647923044",
     about: "Amul Fresh Milk",
     weight: "250gm",
-    price: "40",
+    price: 40,
     offer: "",
     discount:0
   },
@@ -66,7 +66,7 @@ export const ApiOfProducts = [
       "https://5.imimg.com/data5/IG/GI/MY-69718924/ice-cream-cup-500x500.jpg",
     about: "Ice-Cream",
     weight: "500gm",
-    price: "120",
+    price: 120,
     offer: "3% OFF",
     discount:3.6
   },
@@ -77,7 +77,7 @@ export const ApiOfProducts = [
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/45533a.jpg?ts=1654845569",
     about: "Amul Masti Crud",
     weight: "250gm",
-    price: "307",
+    price: 307,
     offer: "",
     discount:0
   },
@@ -88,7 +88,7 @@ export const ApiOfProducts = [
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/10491a.jpg",
     about: "Nested Milkmaid",
     weight: "300gm",
-    price: "207",
+    price: 207,
     offer: "16% OFF",
     discount:33.12
   },
@@ -99,7 +99,7 @@ export const ApiOfProducts = [
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/10491a.jpg",
     about: "Nested Milkmaid",
     weight: "300gm",
-    price: "207",
+    price: 207,
     offer: "",
     discount:0
   },
@@ -110,7 +110,7 @@ export const ApiOfProducts = [
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/10491a.jpg",
     about: "Nested Milkmaid",
     weight: "300gm",
-    price: "207",
+    price: 207,
     offer: "",
     discount:0
   },
@@ -121,7 +121,7 @@ export const ApiOfProducts = [
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/10491a.jpg",
     about: "Nested Milkmaid",
     weight: "300gm",
-    price: "207",
+    price: 207,
     offer: "6% OFF",
     discount:12.42
   },
@@ -132,7 +132,7 @@ export const ApiOfProducts = [
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/10491a.jpg",
     about: "Nested Milkmaid",
     weight: "300gm",
-    price: "207",
+    price: 207,
     offer: "",
     discount:0
   },
@@ -143,7 +143,7 @@ export const ApiOfProducts = [
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/24194a.jpg?ts=1661157751",
     about: "Kingfisher Beer",
     weight: "200gm",
-    price: "87",
+    price: 87,
     offer: "2% OFF",
     discount:1.74
   },
@@ -154,7 +154,7 @@ export const ApiOfProducts = [
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/45533a.jpg?ts=1654845569",
     about: "Amul Masti Crud",
     weight: "250gm",
-    price: "307",
+    price: 307,
     offer: "",
     discount:0
   },
@@ -165,7 +165,7 @@ export const ApiOfProducts = [
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/483705a.jpg?ts=1657805510",
     about: "Table White Eggs",
     weight: "500gm",
-    price: "120",
+    price: 120,
     offer: "7% OFF",
     discount:8.40
   },
@@ -176,7 +176,7 @@ export const ApiOfProducts = [
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/19512a.jpg?ts=1647923044",
     about: "Amul Fresh Milk",
     weight: "250gm",
-    price: "40",
+    price: 40,
     offer: "",
     discount:0
   },
@@ -187,7 +187,7 @@ export const ApiOfProducts = [
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/483705a.jpg?ts=1657805510",
     about: "Table White Eggs",
     weight: "500gm",
-    price: "120",
+    price: 120,
     offer: "3% OFF",
     discount:3.60
   },
@@ -198,7 +198,7 @@ export const ApiOfProducts = [
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=135/app/images/products/sliding_image/483705a.jpg?ts=1657805510",
     about: "Table White Eggs",
     weight: "500gm",
-    price: "120",
+    price: 120,
     offer: "",
     discount:0
   },
